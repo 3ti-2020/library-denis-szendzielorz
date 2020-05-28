@@ -18,8 +18,6 @@
                     <input type="text" name="Nazwisko" placeholder="Nazwisko">
                     <input type="text" name="tytul" placeholder="tytul">
                     <input type="text" name="ISBN" placeholder="ISBN">
-                    <input type="text" name="id_autor" placeholder="id_autor">
-                    <input type="text" name="id_tytul" placeholder="id_tytul">
                     <input type="submit" value="Dodaj">
                 </form>
 
@@ -52,12 +50,6 @@
                         echo("<td>".$row['Imię']."</td>");
                         echo("<td>".$row['Nazwisko']."</td>");
                         echo("<td>".$row['tytul']."</td>");
-                        echo("<td>
-                            <form action='del-ks.php' method='post'>
-                                <input type='hidden' name='id_ksiazki' value='".$row['id_ksiazki']."'>
-                                <input type='submit' value='del'>
-                            </form>
-                        </td>");
                         echo("</tr>");
                     }
                     echo("</table>")
@@ -65,8 +57,23 @@
         </div>
 
 
-        <div class="item d">
+                <div class="item d">
+                <h2> Podaj id książki, którą chcesz usunąć: </h2>
+                <form class="form" action="del-ks.php" method="POST">
+                <input type="text" name="id_ksiazki"/>
+                <br/>
+                <input type="submit" value="Usuń"/>
+                </form>
+                <br/><br/>
 
+                <h2> Podaj id autora, którego chcesz usunąć: </h2>
+
+                <form class="form" action="del-aut.php" method="POST">
+                <input type="text" name="id_autor"/>
+                <br/>
+                <input type="submit" value="Usuń"/>
+                </form>
+                <br/><br/>
         </div>
 
 
