@@ -1,3 +1,44 @@
-body {
-color: black;
+*{
+    margin: 0;
+    padding:0;
+}
+
+.item{
+    display: flex;
+    margin: 1px;
+    background-color: lightskyblue;
+    justify-content: center;
+    align-items: center;
+}
+
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+}
+
+.c{
+    grid-area: c;
+}
+
+.d{
+    grid-area: d;
+}
+
+.e{
+    grid-area: e;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    border: 1px solid black;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 30% 40% 30%;
+    grid-template-areas:
+    "a a a"
+    "b c d"
+    "e e e";
 }
